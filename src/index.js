@@ -1,5 +1,5 @@
 module.exports = function solveSudoku(matrix) {
-  var nonPossibilities = <},impossibleNumbers, emptySpaces = 81; 
+  var nonPossibilities = {},impossibleNumbers, emptySpaces = 81; 
   while (emptySpaces >0) {
     for (var vert = 0; vert < matrix.length; vert ++) { 
       for (var horz = 0; horz < matrix.length; horz++) { 
@@ -12,10 +12,10 @@ module.exports = function solveSudoku(matrix) {
             if (matrix[i][horz] > 0) { nonPossibilities[matrix[i][horz]] = true 
             }
           }
-          for (var vertBox = Math.floor((vert/3) * 3; vertBox < Math.floor((vert/3)* 3 + 3; vertBox++){
-            for (var horzBox = Math.floor((horz/3) * 3; horzBox < Math.floor((horz/3)* 3 + 3; horzBox++){
+          for (var vertBox = Math.floor(vert / 3) * 3; vertBox < Math.floor(vert/3)* 3 + 3; vertBox++){
+            for (var horzBox = Math.floor(horz/3) * 3; horzBox < Math.floor(horz/3)* 3 + 3; horzBox++){
               if (matrix[vertBox][horzBox]){
-                nonPossibilities [matrix[[vertBox] [horzBox]] = true;
+                nonPossibilities [matrix[vertBox] [horzBox]] = true;
               }
             }
           }
@@ -33,4 +33,3 @@ module.exports = function solveSudoku(matrix) {
   }
   return matrix;
 }
-  
