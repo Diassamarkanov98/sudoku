@@ -26,6 +26,8 @@ module.exports = function solveSudoku(matrix) {
                 matrix[vert][horz] = i;
               }
             }
+          } else {
+            emptySpaces++;
           }
         }
       }
